@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.grid {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    
+}
+
+
+.stencil {
+    background-color: blue;
+}
+
+.hover:hover {
+    background-color: blue;
+}

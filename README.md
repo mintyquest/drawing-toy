@@ -1,2 +1,2 @@
 # drawing-toy
-A drawing toy inspired by the Etch a Sketch
+A simple drawing toy I created inspired by the Etch a Sketch. It runs in the browser.
