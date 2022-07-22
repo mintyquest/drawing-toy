@@ -1,6 +1,8 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button');
+const grid = document.createElement('div');
 
+//The prompt for the player that lets them specify the amount of squares per side that they want
 btn.addEventListener('click', () => {
     let answer = prompt('How many squares do you want per side?');
     if (answer < 101) {
@@ -13,8 +15,6 @@ btn.addEventListener('click', () => {
     }
 });
 
-const grid = document.createElement('div');
-
 //Creates the grid with the specified amount of squares per side
 function createGrid(amount) {
     let i = 0;
@@ -25,22 +25,15 @@ function createGrid(amount) {
     } while (i < amount);
 }
 
-
-
-
+//Sets a size and a black border around the divs, turning them into boxes
 grid.classList.add('grid');
-grid.classList.add('hover'); //cannot figure out to put this in a event listener. But it works anyway like this. Change later.
 
-
-
-
+//Creates the initial 16x16 grid
 createGrid(16);
 
-/*
-
-grid.addEventListener('mouseover', () => {
+//Makes it so moving your mouse over the container will make the grid divs below it change in color
+container.addEventListener('mouseover', (e) => {
     
-    //was grid.classList.add('stencil');
+    //grid.classList.add('stencil');
+    e.target.classList.add('stencil');
 });
-
-*/
